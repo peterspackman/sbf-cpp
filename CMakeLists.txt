@@ -22,6 +22,4 @@ if(CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME)
 endif()
 
 
-export(TARGETS sbf_cpp NAMESPACE sbf:: FILE sbf_cpp.cmake)
-set(CMAKE_EXPORT_PACKAGE_REGISTRY ON)
-export(PACKAGE sbf_cpp)
+add_library(sbf::cpp ALIAS sbf_cpp)
