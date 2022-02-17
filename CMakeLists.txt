@@ -20,3 +20,8 @@ if(CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME)
     include(CTest)
     add_subdirectory("${CMAKE_CURRENT_SOURCE_DIR}/tests")
 endif()
+
+
+export(TARGETS sbf_cpp NAMESPACE sbf:: FILE sbf_cpp.cmake)
+set(CMAKE_EXPORT_PACKAGE_REGISTRY ON)
+export(PACKAGE sbf_cpp)
